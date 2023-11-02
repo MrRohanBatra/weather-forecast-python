@@ -65,7 +65,7 @@ This project is licensed under the GNU License. See the [LICENSE](LICENSE) file 
 
 ## Author
 
-- Your Name
-- GitHub: [YourGitHubUsername](https://github.com/YourGitHubUsername)
+- Rohan Batra 
+- GitHub: [MrRohanBatra](https://github.com/MrRohanBatra)
 
 Feel free to customize this README to include your own details and branding. Enjoy using the Weather Forecast Python Application!
