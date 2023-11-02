@@ -9,4 +9,4 @@ def weather_forcast(city,Api):
         temp_c=data["current"]["temp_c"]
         temp_f=data["current"]["temp_f"]
         loaction=data["location"]["name"]+","+data["location"]["country"]
-        return {'loc':loaction,'celcious'=temp_c,"faren":temp_c}
+        return {'loc':loaction,'celcious':temp_c,"faren":temp_c}
