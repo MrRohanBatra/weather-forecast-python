@@ -14,7 +14,7 @@ Before you begin, ensure you have the following requirements:
 1. Clone this repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/yourusername/weather-forecast-python.git
+   git clone https://github.com/MrRohanBatra/Weather-Python.git
    ```
 
 2. Change your current working directory to the project folder:
