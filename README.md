@@ -39,7 +39,7 @@ To use this application, follow these steps:
    python weather.py
    ```
 
-4. You will be prompted to enter the name of the city for which you want to get the weather forecast. Enter the city name in the format `(city,name)` and press Enter.
+4. You will be prompted to enter the name of the city for which you want to get the weather forecast. Enter the city name in the format `(city,country)` and press Enter.
 
 5. The application will retrieve the weather data from WeatherAPI and display the current weather information for the specified city, including location, temperature in both Celsius and Fahrenheit, and the date and time of the forecast.
 
