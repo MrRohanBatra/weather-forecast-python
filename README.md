@@ -23,9 +23,7 @@ Before you begin, ensure you have the following requirements:
    cd weather-forecast-python
    ```
 
-3. Open the `weather.py` file in a text editor and replace `"YOUR_API_KEY_HERE"` with your WeatherAPI API key.For the first time you have to enter it next time it will detect automatically.
-
-4. Save and close the file.
+3. The `weather.py` will automatically detect your WeatherAPI API key.For the first time you have to enter it next time it will detect automatically(only windows users).
 
 ## Usage
 
@@ -53,10 +51,10 @@ Here's an example of how the application works:
 Enter city name in the format (city,name)
 Ans: New York, USA
 
-The weather for the day is..................
-Location: New York, USA
-Temperature: 20°C || 68°F
-Date: 2023-11-02 15:47
+->The weather for the day is..................
+->Location: New York, USA
+->Temperature: 20°C || 68°F
+->Date: 2023-11-02 15:47
 ```
 
 ## License
