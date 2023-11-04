@@ -12,7 +12,10 @@ else:
     API=input("Enter your API key: ")
 print("autorefresh mode is set to on")
 city=input("Enter city name in the format (city,country)\nAns:")
-os.system("cls")
+if (os.name=="nt"):
+    os.system("cls")
+else:
+    os.system("clear")
 if (city.lower()=="delhi"):
     city="delhi,india"
 def autorefresh(city,api,t):
