@@ -11,10 +11,14 @@ if (os.name=="nt"):
         pyset.set_variable("API_Weatherapi.com",API,os.getenv("USERNAME"))   # to set environment variable
 else:
     API=input("Enter your API key: ")
-city=input("Enter city name in the format (city,name)\nAns:")
+print("autorefresh mode is set to on")
+city=input("Enter city name in the format (city,country)\nAns:")
+os.system("cls")
+if (city.lower()=="delhi"):
+    city="delhi,india"
 def autorefresh(city,api,t):
     while True:
-        if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
+        if (int((datetime.now().time().strftime("%S")))- int(t) > 9):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
@@ -40,6 +44,6 @@ def weather_forcast(city,Api):
         print(f"\nThe weather for the day is..................\n->Location:{location}\n->Temperature:{temp_c}°C || {temp_f}°F\n->Date:{datetime.now().date()} {time}\n\n")
     else:
         print("\n->Unable to fetch data\n->Might be a issue with your city name or the API key.\n->Please check")
-        weather_forcast(input("\nEnter city name in the format (city,name)\nAns:"),Api)
+        weather_forcast(input("\nEnter city name in the format (city,country)\nAns:"),Api)
     autorefresh(city,Api,datetime.now().time().strftime("%S"))
 weather_forcast(city,API)
