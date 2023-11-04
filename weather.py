@@ -14,7 +14,7 @@ else:
 city=input("Enter city name in the format (city,name)\nAns:")
 def autorefresh(city,api,t):
     while True:
-        if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
+        if (int((datetime.now().time().strftime("%S")))- int(t) > 5):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
