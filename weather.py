@@ -6,7 +6,6 @@ from datetime import *
 if (os.name=="nt"):
     if ("API_Weatherapi.com" in os.environ):
         API=os.getenv("API_weatherapi.com")
-        print(API)
     else:
         API=input("Enter your API key: ")
         pyset.set_variable("API_Weatherapi.com",API,os.getenv("USERNAME"))   # to set environment variable
