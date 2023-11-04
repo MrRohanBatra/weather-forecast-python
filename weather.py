@@ -1,6 +1,5 @@
 import requests
 import os
-import py_setenv as pyset
 from datetime import *
 if (os.name=="nt"):    
     import py_setenv as pyset
