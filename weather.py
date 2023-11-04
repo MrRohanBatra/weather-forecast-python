@@ -1,9 +1,9 @@
 import requests
 import os
 import py_setenv as pyset
-
 from datetime import *
-if (os.name=="nt"):
+if (os.name=="nt"):    
+    import py_setenv as pyset
     if ("API_Weatherapi.com" in os.environ):
         API=os.getenv("API_weatherapi.com")
     else:
