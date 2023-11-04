@@ -1,6 +1,7 @@
 import requests
 import os
 from datetime import *
+import platform
 if (os.name=="nt"):    
     import py_setenv as pyset
     if ("API_Weatherapi.com" in os.environ):
@@ -10,8 +11,8 @@ if (os.name=="nt"):
         pyset.set_variable("API_Weatherapi.com",API,os.getenv("USERNAME"))   # to set environment variable
 else:
     API=input("Enter your API key: ")
-print("autorefresh mode is set to on")
-city=input("Enter city name in the format (city,country)\nAns:")
+print("\nutorefresh mode is set to on")
+city=input("\nEnter city name in the format (city,country)\nAns:")
 if (os.name=="nt"):
     os.system("cls")
 else:
@@ -20,15 +21,17 @@ if (city.lower()=="delhi"):
     city="delhi,india"
 def autorefresh(city,api,t):
     while True:
-        if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
+        if (int((datetime.now().time().strftime("%S")))- int(t) > 5):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
                 weather_forcast(city,api)
-            elif (os.name =="linux"):
+            elif (platform.system().lower() =="linux"):
+                os.system("clear")
                 print("Refreshed......\n")
                 weather_forcast(city,api)
             else:
+                os.system("clear")
                 print("Refreshed......\n")
                 weather_forcast(city,api)
         else:
