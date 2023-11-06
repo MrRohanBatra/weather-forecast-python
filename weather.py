@@ -1,17 +1,17 @@
 import requests
+import platform
 import os
-import py_setenv as pyset
-
 from datetime import *
 if (os.name=="nt"):
+    import py_setenv as pyset 
     if ("API_Weatherapi.com" in os.environ):
-        API=os.getenv("API_weatherapi.com")
+        API=os.getenv("API_weatherapi.com") #to retrieve the key from the operating system
     else:
         API=input("Enter your API key: ")
         pyset.set_variable("API_Weatherapi.com",API,os.getenv("USERNAME"))   # to set environment variable
 else:
     API=input("Enter your API key: ")
-l_city=[
+l_city=[                                                            #list of favourate cities can be changed just an example 
     ("Mumbai", "India"),
     ("Delhi", "India"),
     ("Kolkata", "India"),
@@ -53,14 +53,15 @@ l_city=[
     ("Jamshedpur", "India"),
     ("Asansol", "India")
 ]      
-def autorefresh(city,api,t):
+def autorefresh(city,api,t): #function for auto refreshing the weather_forcast fuction
     while True:
         if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
                 weather_forcast(city,api)
-            elif (os.name =="linux"):
+            elif (platform.system()=="linux"):
+                os.system("clear")
                 print("Refreshed......\n")
                 weather_forcast(city,api)
             else:
@@ -81,12 +82,12 @@ def weather_forcast(city,Api,s=0):
         print(f"\nThe weather for the day is..................\n->Location:{location}\n->Temperature:{temp_c}°C || {temp_f}°F\n->Date:{datetime.now().date()} {time}\n\n")
     else:
         print("\n->Unable to fetch data\n->Might be a issue with your city name or the API key.\n->Please check")
-        weather_forcast(input("\nEnter city name in the format (city,country)\nAns:"),Api)
+        weather_forcast(input("\nEnter city name in the format (city,country)\nAns:"),input("\nEnter API key again\nAns:"))
     if(s==0):
         autorefresh(city,Api,datetime.now().time().strftime("%S"))
 def mainmenu():
     global API
-    print("        Welcome to the weather app.........................          ")
+    print("Welcome to the weather app.........................          ")
     print("\nTo display the weather")
     while True:
         print("Choose any one from the following options\n1->city of your choice\n2->Cities from favourate list\n3->exit")
