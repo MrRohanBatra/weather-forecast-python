@@ -23,7 +23,7 @@ l_city=[                                                            #list of fav
 ]      
 def autorefresh(city,api,t): #function for auto refreshing the weather_forcast fuction
     while True:
-        if (int((datetime.now().time().strftime("%S")))- int(t) > 30):
+        if (int((datetime.now().time().strftime("%S")))- int(t) > 9):
             if (os.name=="nt"):
                 os.system("cls")
                 print("Refreshed......\n")
