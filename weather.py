@@ -20,38 +20,6 @@ l_city=[
     ("Hyderabad", "India"),
     ("Ahmedabad", "India"),
     ("Pune", "India"),
-    ("Surat", "India"),
-    ("Jaipur", "India"),
-    ("Lucknow", "India"),
-    ("Kanpur", "India"),
-    ("Nagpur", "India"),
-    ("Visakhapatnam", "India"),
-    ("Indore", "India"),
-    ("Patna", "India"),
-    ("Vadodara", "India"),
-    ("Ghaziabad", "India"),
-    ("Ludhiana", "India"),
-    ("Nashik", "India"),
-    ("Faridabad", "India"),
-    ("Agra", "India"),
-    ("Meerut", "India"),
-    ("Varanasi", "India"),
-    ("Srinagar", "India"),
-    ("Amritsar", "India"),
-    ("Jabalpur", "India"),
-    ("Aurangabad", "India"),
-    ("Dhanbad", "India"),
-    ("Prayagraj", "India"),
-    ("Ranchi", "India"),
-    ("Bhopal", "India"),
-    ("Gwalior", "India"),
-    ("Tiruchirappalli", "India"),
-    ("Kota", "India"),
-    ("Vasai-Virar", "India"),
-    ("Kollam", "India"),
-    ("Bhiwandi", "India"),
-    ("Jamshedpur", "India"),
-    ("Asansol", "India")
 ]      
 def autorefresh(city,api,t):
     while True:
@@ -86,7 +54,7 @@ def weather_forcast(city,Api,s=0):
         autorefresh(city,Api,datetime.now().time().strftime("%S"))
 def mainmenu():
     global API
-    print("        Welcome to the weather app.........................          ")
+    print("Welcome to the weather app.........................          ")
     print("\nTo display the weather")
     while True:
         print("Choose any one from the following options\n1->city of your choice\n2->Cities from favourate list\n3->exit")
